@@ -1,0 +1,22 @@
+<div class="flex modal-container">
+    <p-progressSpinner *ngIf="showSpinner"></p-progressSpinner>
+    <div class="comic_card_top" *ngIf="currentComic">
+        <img class="comic_card_top-img" [src]="currentComic.thumbnail.path + '.' + currentComic.thumbnail.extension" alt="currentComic.title">
+        <div class="comic_card_top-right">
+            <h4 class="title">{{currentComic.title}}</h4>
+            <p>{{ currentComic.description == null || currentComic.description == "" ? 'No description found': currentComic.description }}</p>
+        </div>
+    </div>
+    <div class="comic_card_bottom" *ngIf="currentComic">
+        <button class="button-fav title"
+                (click)="addFavourite(currentComic)"
+                [disabled]="disableBtn">
+            <img class="comic_card_bottom-img" src="../../../../assets/icons/favourites.png" alt="favourites icon">
+            {{ disableBtn ? 'ADDED TO FAVOURITES' : 'ADD TO FAVOURITES ' }}
+        </button>
+        <button class="button-buy title">
+            <img class="comic_card_bottom-img" src="../../../../assets/icons/shopping-cart-primary.png" alt="shopping cart">
+            BUY FOR $3.99
+        </button>
+    </div>
+</div>

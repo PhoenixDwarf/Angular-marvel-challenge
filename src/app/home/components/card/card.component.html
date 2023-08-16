@@ -1,0 +1,28 @@
+<article class="flex">
+    <div class="flex card-top">
+        <div><img [src]="heroe.thumbnail.path + '.' + heroe.thumbnail.extension"
+                [alt]="heroe.name">
+        </div>
+        <div class="card-top-right">
+            <h4 class="title">{{heroe.name}}</h4>
+            <p>
+                {{ heroe.description == '' || heroe.description == "" ? 'No description found': heroe.description  }}
+            </p>
+            <button class="btn btn-danger title"
+                    [routerLink]="['/character/', heroe.id]"
+                    [queryParams]="{searchBy: searchBy}" >
+                VIEW MORE
+            </button>
+        </div>
+    </div>
+    <div class="card-bottom">
+        <h5 class="title gray-title">Related comics</h5>
+        <div class="flex card-bottom-comics">
+            <span (click)="show(heroe.comics.items[0].resourceURI)" class="span-hover">{{heroe.comics.items[0]?.name}}</span>
+            <span (click)="show(heroe.comics.items[1].resourceURI)" class="span-hover">{{heroe.comics.items[1]?.name}}</span>
+            <span (click)="show(heroe.comics.items[2].resourceURI)" class="span-hover">{{heroe.comics.items[2]?.name}}</span>
+            <span (click)="show(heroe.comics.items[3].resourceURI)" class="span-hover">{{heroe.comics.items[3]?.name}}</span>
+            <span *ngIf="heroe.comics.available == 0">No associated comics found</span>
+        </div>
+    </div>
+</article>

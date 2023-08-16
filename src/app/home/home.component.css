@@ -1,0 +1,20 @@
+.selector{
+    width: 100%;
+    min-height: 960px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.right-panel{
+    background-color: #EBEBEB;
+}
+.spinner{
+    width: 100%;
+    justify-content: center;
+}
+.gotofavourites{
+    color: #529bee;
+    cursor: pointer;
+}
+.gotofavourites:hover{
+    color: #155aa8;
+}

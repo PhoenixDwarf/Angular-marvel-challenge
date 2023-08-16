@@ -1,1 +1,216 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/primeng/resources/themes/saga-blue/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css';
+@import '../node_modules/primeflex/primeflex.css';
+@import '../node_modules/primeicons/primeicons.css';
+              
+body{
+    background-color: #F4F4F4;
+}
+p,span{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.title{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+.gray-title{
+    color: #7E7A79;
+}
+.flex{
+    display: flex;
+}
+
+.top-title{
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.top-title img{
+   margin-right: 15px;
+   padding-bottom: 5px;
+}
+.p-grid.p-nogutter.grid.grid-nogutter{
+    justify-content: space-evenly;
+    background-color: #F4F4F4;
+}
+.p-paginator-bottom.p-paginator.p-component.ng-star-inserted{
+    background-color: #F4F4F4;
+}
+
+.left-title{
+    justify-content: space-between;
+}
+.left-title .dropdown{
+    margin-right: 2rem;
+}
+.left-title div.flex{
+    margin-left: 1rem;
+}
+
+.primeDialog .p-dialog-content{
+    overflow-y: hidden;
+    padding: 0px;
+}
+.primeDialog{
+    transition: all 0.25s;
+}
+.button-buy{
+    background-color: #DCDCDC;
+}
+.button-buy:hover{
+    background-color: #c5c3c3;
+}
+.button-fav{
+    background-color: #F0F0F0;
+}
+.button-fav:not(:disabled):hover{
+    background-color: #f5e4e4;
+}
+.button-fav:disabled{
+    background-color: #322827;
+    color: #EC1D23;
+}
+.p-dialog-header-close-icon::before{
+    content: url('../src/assets/icons/btn-close.png') !important;
+}
+.p-dialog-header-close-icon:hover{
+    opacity: 0.5;
+}
+.spinner{
+    position: relative;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, 0);
+}
+.myFavoriteDiv{
+    flex-direction: column;
+    align-items: center;
+}
+.myFavoriteImg{
+    height: 250px;
+}
+.myFavoriteDiv h6{
+    text-align: center;
+    width: 80%;
+}
+.myFavoriteTotal{
+    justify-content: space-evenly;
+}
+.myFavoriteDiv-delete{
+    margin-right: -161px;
+    margin-bottom: -15px;
+    z-index: 2;
+    width: 25px;
+    cursor: pointer;
+}
+.myFavoriteDiv-delete:hover{
+    opacity: 0.8;
+}
+.favourites_component{
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.favourites_component .myFavoriteDiv{
+    width: 250px;
+}
+.favourites_component-404{
+    align-items: center;
+}
+.favourites_component-404 img{
+    height: 80%;
+    margin-right: 50px;
+}
+
+@media (max-width: 991px){
+    .aside{
+        display: none;
+    }
+    .header-nav{
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .header-nav .p-input-icon-left{
+        margin-top: 10px;
+    }
+    .character_container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .character_container-img{
+        margin: 0px !important;
+        height: 50% !important;
+        width: 50% !important;
+    }
+    .character_container-info{
+        align-items: center !important;
+    }
+    .character_container-info-top{
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 992px){
+    .gotofavourites-navbar{
+        display: none;
+    }
+}
+
+@media (max-width: 470px){
+    .header-dropdown{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-dropdown h2{
+        margin: 0px 0px 10px 0px !important;
+    }
+    .comic_card_bottom{
+        flex-direction: column;
+    }
+    .comic_card_bottom button{
+        width: 100% !important;
+    }
+}
+.primeDialog.p-dialog.p-dynamic-dialog{
+    margin: 0px 20px;
+}
+@media (max-width: 550px){
+    .comic_card_top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .comic_card_top img{
+        width: 150px !important;
+    }
+    .comic_card_top-right{
+        margin: 10px 0px 0px 0px !important;
+    }
+    .comic_card_top-right h4{
+        text-align: center;
+    }
+    .comic_card_top-right p{
+        margin: 0px;
+    }
+}
+@media (max-width: 670px){
+    .favourites_component-404{
+        flex-direction: column;
+        align-items: center;
+    }
+    .favourites_component-404 img{
+        width: 90%;
+        margin: 10px;
+    }
+    .favourites_component-404 div h1, .favourites_component-404 div h6{
+        text-align: center;
+    }
+}
+.footer{
+    text-align: center;
+    margin: 20px 0px;
+}

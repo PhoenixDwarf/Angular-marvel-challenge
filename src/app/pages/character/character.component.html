@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="spinner">
+        <p-progressSpinner *ngIf="showSpinner"></p-progressSpinner>
+    </div>
+    <div class="character_container flex" *ngIf="!showSpinner && currentHero">
+        <img [src]="currentHero.thumbnail.path + '.' + currentHero.thumbnail.extension" [alt]="currentHero.title" class="character_container-img">
+        <div class="character_container-info flex">
+            <div>
+                <div class="flex character_container-info-top">
+                    <img src="../../assets/icons/characters.png" alt="characters" class="character_container-info-icon">
+                    <h2 class="title">{{currentHero.name}}</h2>
+                </div>
+                <h5>Description:</h5>
+                <p>{{ currentHero.description == '' || currentHero.description == "" ? 'No description found': currentHero.description  }}</p>
+                <h5>Modified:</h5>
+                <p>{{currentHero.modified | date}}</p>
+                <h5>More:</h5>
+                <p *ngFor="let item of currentHero.urls">
+                    {{item.type | titlecase}}: <a [href]="item.url" target="blank"> Click me! </a>
+                </p>
+            </div>
+            <button type="button" class="btn btn-secondary title" routerLink="home" queryParamsHandling="preserve">Go back home</button>
+        </div>
+    </div>
+</div>

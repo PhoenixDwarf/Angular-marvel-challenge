@@ -1,0 +1,30 @@
+.modal-container{
+    align-items: center;
+    flex-direction: column;
+}
+.comic_card_top , .comic_card_bottom{
+    width: 100%;
+    display: flex;
+}
+.comic_card_top{
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+.comic_card_top-right{
+    margin-left: 30px;
+}
+.comic_card_top-img{
+    width: 240px;
+}
+p{
+    max-width: 500px;
+}
+button{
+    width: 50%;
+    height: 70px;
+    border: none;
+}
+.comic_card_bottom-img{
+    width: 35px;
+    margin-right: 5px;
+    border-radius: 15px;
+}

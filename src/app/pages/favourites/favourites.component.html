@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="flex top-title mt-5 mb-5">
+        <img src="../../assets/icons/favourites.png" alt="favourites">
+        <h2 class="title">My favourites comics</h2>
+    </div>
+    <div class="flex myFavoriteTotal">
+        <h6 class="title">Total: {{favsArray.length}}</h6>
+        <button type="button" class="btn btn-secondary title" routerLink="home">Go back home</button>
+    </div>
+</div>
+<div class="container favourites_component flex">
+    <div *ngIf="favsArray.length == 0" class="flex favourites_component-404">
+        <img src="../../../assets/images/iron404.png" alt="iron man">
+        <div>
+            <h1>UPS!</h1>
+            <h6>Seems that you don't have any favourites comics yet</h6>
+        </div>
+    </div>
+    <div *ngFor="let comic of favsArray" class="flex myFavoriteDiv mb-4">
+        <img src="../../assets/icons/btn-delete.png" alt="btn-delete" class="myFavoriteDiv-delete" (click)="deleteFavComic(comic)">
+        <img class="myFavoriteImg" [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension" alt="comic.title">
+        <h6 class="title mt-2">{{ comic.title }}</h6>
+    </div>
+</div>
